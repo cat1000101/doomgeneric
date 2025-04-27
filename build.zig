@@ -25,11 +25,9 @@ pub fn build(b: *Builder) void {
     });
 
     const userModule = b.createModule(.{
-        .optimize = .ReleaseSmall,
+        .optimize = .Debug,
         .target = target,
-        .code_model = .default, // may need to change this to something else
         .link_libc = true,
-        .strip = false,
     });
 
     const userExe = b.addExecutable(.{
