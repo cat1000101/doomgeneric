@@ -24,14 +24,11 @@ void debugPrintChar(char c)
 		: "%eax", "%ebx");
 }
 
-int debugPrintf(const char *restrict fmt, ...)
+int debugPrintf(const char *restrict fmt, va_list args)
 {
 	char formatted_string[1024];
 
-	va_list args;
-	va_start(args, fmt);
 	int result = vsnprintf(formatted_string, sizeof(formatted_string), fmt, args);
-	va_end(args);
 
 	if (result < 0)
 	{

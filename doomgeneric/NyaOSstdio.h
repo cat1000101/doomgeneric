@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void debugPrint(const char *);
-int debugPrintf(const char *__restrict, ...);
+int debugPrintf(const char *__restrict, va_list);
 
 int puts(const char *);
 int putchar(int);

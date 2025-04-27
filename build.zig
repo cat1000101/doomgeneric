@@ -31,7 +31,7 @@ pub fn build(b: *Builder) void {
     });
 
     const userExe = b.addExecutable(.{
-        .name = "program",
+        .name = "program.elf",
         .root_module = userModule,
     });
     userExe.setLinkerScript(b.path("doomgeneric/linker.ld"));
@@ -41,7 +41,7 @@ pub fn build(b: *Builder) void {
         .flags = &[_][]const u8{
             "-static",
             "-Wall",
-            "-Os",
+            "-O0",
             "-ggdb3",
             "-g",
             "-DDOOMGENERIC_RESX=800",

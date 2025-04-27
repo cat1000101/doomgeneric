@@ -114,13 +114,9 @@ static byte *AutoAllocMemory(int *size, int default_ram, int min_ram)
 
         // Try to allocate the zone memory.
 
-        printf("size: %X",size);
         *size = default_ram * 1024 * 1024;
-        printf("size: %X",size);
         
         zonemem = malloc(*size);
-
-        printf("zonemem: %X", zonemem);
         
         // Failed to allocate?  Reduce zone size until we reach a size
         // that is acceptable.
