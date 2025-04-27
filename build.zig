@@ -29,6 +29,7 @@ pub fn build(b: *Builder) void {
         .target = target,
         .code_model = .default, // may need to change this to something else
         .link_libc = true,
+        .strip = false,
     });
 
     const userExe = b.addExecutable(.{
@@ -44,6 +45,7 @@ pub fn build(b: *Builder) void {
             "-Wall",
             "-Os",
             "-ggdb3",
+            "-g",
             "-DDOOMGENERIC_RESX=800",
             "-DDOOMGENERIC_RESY=600",
         },
