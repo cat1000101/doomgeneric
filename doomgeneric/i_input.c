@@ -19,7 +19,7 @@
 #include <math.h>
 #include <string.h>
 #include <fcntl.h>
-#include <stdio.h>
+#include "NyaOSstdio.h"
 
 #include "config.h"
 #include "deh_str.h"

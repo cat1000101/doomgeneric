@@ -17,7 +17,7 @@
 //
 
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 
 #include "z_zone.h"
 

@@ -55,6 +55,8 @@ pub fn build(b: *Builder) void {
 }
 
 const cSources = [_][]const u8{
+    "doomgeneric/NyaOSstdio.c",
+
     "doomgeneric/dummy.c",
     "doomgeneric/am_map.c",
     "doomgeneric/doomdef.c",
@@ -138,6 +140,8 @@ const cSources = [_][]const u8{
     "doomgeneric/doomgeneric_NyaOS.c",
 };
 const hFiles = [_][]const u8{
+    "doomgeneric/NyaOSstdio.h",
+
     "doomgeneric/am_map.h",
     "doomgeneric/config.h",
     "doomgeneric/deh_main.h",

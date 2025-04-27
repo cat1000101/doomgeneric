@@ -16,7 +16,7 @@
 //     to the IWAD type.
 //
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>

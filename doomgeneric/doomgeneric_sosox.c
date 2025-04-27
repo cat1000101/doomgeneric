@@ -5,7 +5,7 @@
 #include "m_argv.h"
 #include "doomgeneric.h"
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>

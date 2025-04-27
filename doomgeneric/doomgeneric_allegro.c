@@ -8,7 +8,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <unistd.h>
 
 #define ALLEGRO_NO_KEY_DEFINES 1

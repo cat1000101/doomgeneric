@@ -20,7 +20,7 @@
 
 
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 
 #include "i_system.h"
 #include "i_video.h"

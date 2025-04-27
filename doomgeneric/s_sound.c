@@ -15,7 +15,7 @@
 // DESCRIPTION:  none
 //
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 
 #include "i_sound.h"

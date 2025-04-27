@@ -21,7 +21,7 @@
 
 
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 
 #include "i_system.h"

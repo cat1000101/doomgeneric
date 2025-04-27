@@ -17,7 +17,7 @@
 //	Shooting and aiming.
 //
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 
 #include "deh_misc.h"

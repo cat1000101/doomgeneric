@@ -3,7 +3,7 @@
 #include "doomgeneric.h"
 
 #include <ctype.h>
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <string.h>
 #include <unistd.h>
 #include <sys/time.h>
@@ -126,26 +126,11 @@ int DG_GetKey(int *pressed, unsigned char *doomKey)
 
 void DG_SetWindowTitle(const char *title)
 {
-    // if (s_Window)
-    // {
-    //   XChangeProperty(s_Display, s_Window, XA_WM_NAME, XA_STRING, 8, PropModeReplace, (const unsigned char *)title, strlen(title));
-    // }
-}
-
-void debugPrint(const char *string)
-{
-    asm(
-        "movl $69, %%eax\n"
-        "movl %0, %%ebx\n"
-        "int $0x80\n"
-        :
-        : "r"(string)
-        : "%eax", "%ebx");
 }
 
 int main(int argc, char **argv)
 {
-    debugPrint("hello from doomgeneric main");
+    debugPrintf("hello from doomgeneric main");
 
     doomgeneric_Create(0, NULL);
 

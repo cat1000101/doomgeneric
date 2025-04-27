@@ -2,7 +2,7 @@
 
 #include "doomgeneric.h"
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 
 #include <Windows.h>
 

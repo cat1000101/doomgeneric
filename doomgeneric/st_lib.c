@@ -17,7 +17,7 @@
 //
 
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <ctype.h>
 
 #include "deh_main.h"

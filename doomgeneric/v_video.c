@@ -19,7 +19,7 @@
 //	Functions to blit a block to the screen.
 //
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <string.h>
 #include <math.h>
 

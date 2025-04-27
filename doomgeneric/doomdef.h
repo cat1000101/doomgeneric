@@ -20,7 +20,7 @@
 #ifndef __DOOMDEF__
 #define __DOOMDEF__
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <string.h>
 
 #include "doomtype.h"

@@ -21,7 +21,7 @@
 #endif
 
 #include <stdlib.h>
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <string.h>
 
 #include "doomtype.h"

@@ -3,7 +3,7 @@
 #include "doomgeneric.h"
 
 #include <ctype.h>
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <string.h>
 #include <unistd.h>
 #include <sys/time.h>

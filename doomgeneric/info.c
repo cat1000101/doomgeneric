@@ -18,7 +18,7 @@
 //	This one is the original DOOM version, preserved.
 //
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 
 // Data.

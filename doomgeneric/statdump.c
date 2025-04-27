@@ -19,7 +19,7 @@
 
  */
 
-#include <stdio.h>
+#include "NyaOSstdio.h"
 #include <stdlib.h>
 #include <string.h>
 
