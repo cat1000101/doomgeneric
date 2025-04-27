@@ -130,7 +130,7 @@ void DG_SetWindowTitle(const char *title)
 
 int main(int argc, char **argv)
 {
-    printf("hello from doomgeneric main");
+    printf("hello from doomgeneric main\n");
 
     doomgeneric_Create(0, NULL);
 

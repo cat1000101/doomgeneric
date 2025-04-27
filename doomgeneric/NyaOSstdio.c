@@ -13,6 +13,17 @@ void debugPrint(const char *string)
 		: "%eax", "%ebx");
 }
 
+void debugPrintChar(char c)
+{
+	asm(
+		"movl $420, %%eax\n"
+		"movb %0, %%bl\n"
+		"int $0x80\n"
+		:
+		: "r"(c)
+		: "%eax", "%ebx");
+}
+
 int debugPrintf(const char *restrict fmt, ...)
 {
 	char formatted_string[1024];
@@ -29,6 +40,15 @@ int debugPrintf(const char *restrict fmt, ...)
 
 	debugPrint(formatted_string);
 	return result;
+}
+
+int puts(const char *string)
+{
+	debugPrint(string);
+}
+int putchar(int c)
+{
+	debugPrintChar((char)c);
 }
 
 int fprintf(FILE *restrict f, const char *restrict fmt, ...)
