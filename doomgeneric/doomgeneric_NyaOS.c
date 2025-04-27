@@ -147,7 +147,7 @@ int main(int argc, char **argv)
 {
     debugPrint("hello from doomgeneric main");
 
-    doomgeneric_Create(argc, argv);
+    doomgeneric_Create(0, NULL);
 
     while (1)
     {
