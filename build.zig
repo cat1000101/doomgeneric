@@ -24,14 +24,17 @@ pub fn build(b: *Builder) void {
         .cpu_features_add = enabled_features,
     });
 
-    const userModule = b.createModule(.{
-        .optimize = .Debug,
-        .target = target,
-        .link_libc = true,
-    });
+    const userModule = b.addModule(
+        "doomgeneric",
+        .{
+            .optimize = .Debug,
+            .target = target,
+            .link_libc = true,
+        },
+    );
 
     const userExe = b.addExecutable(.{
-        .name = "program.elf",
+        .name = "doomgeneric.elf",
         .root_module = userModule,
     });
     userExe.setLinkerScript(b.path("doomgeneric/linker.ld"));
@@ -51,6 +54,7 @@ pub fn build(b: *Builder) void {
     });
     userExe.addIncludePath(b.path("doomgeneric/"));
 
+    b.addNamedLazyPath("doom1.wad", b.path("doom1.wad"));
     b.installArtifact(userExe);
 }
 
