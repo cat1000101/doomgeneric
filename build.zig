@@ -27,9 +27,10 @@ pub fn build(b: *Builder) void {
     const userModule = b.addModule(
         "doomgeneric",
         .{
-            .optimize = .Debug,
+            .optimize = .ReleaseFast,
             .target = target,
             .link_libc = true,
+            .single_threaded = true,
         },
     );
 
@@ -44,7 +45,7 @@ pub fn build(b: *Builder) void {
         .flags = &[_][]const u8{
             "-static",
             "-Wall",
-            "-O0",
+            "-O2",
             "-ggdb3",
             "-g",
             "-DDOOMGENERIC_RESX=800",
