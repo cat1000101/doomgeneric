@@ -13,7 +13,7 @@ endif
 
 CC = zig cc
 CFLAGS += -target x86-linux-musl -static -Wall -Os -ggdb3
-CFLAGS += -DDOOMGENERIC_RESX=800 -DDOOMGENERIC_RESY=600
+CFLAGS += -DDOOMGENERIC_RESX=640 -DDOOMGENERIC_RESY=400
 LDFLAGS += -Wl,--gc-sections -static
 LIBS += -lm -lc
 

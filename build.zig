@@ -48,8 +48,8 @@ pub fn build(b: *Builder) void {
             "-O2",
             "-ggdb3",
             "-g",
-            "-DDOOMGENERIC_RESX=800",
-            "-DDOOMGENERIC_RESY=600",
+            "-DDOOMGENERIC_RESX=640",
+            "-DDOOMGENERIC_RESY=400",
         },
         .language = .c,
     });
