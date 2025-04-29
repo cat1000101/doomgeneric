@@ -20,7 +20,7 @@ void DG_DrawFrame()
 {
     // DG_ScreenBuffer DOOMGENERIC_RESX, DOOMGENERIC_RESY
     uint32_t sizeInPixels = DOOMGENERIC_RESX * DOOMGENERIC_RESY;
-    printf("size: %d, x: %d, y: %d", sizeInPixels, DOOMGENERIC_RESX, DOOMGENERIC_RESY);
+    // printf("size: %d, x: %d, y: %d", sizeInPixels, DOOMGENERIC_RESX, DOOMGENERIC_RESY);
     syscall(69420, DG_ScreenBuffer, sizeInPixels);
 }
 
@@ -39,23 +39,17 @@ uint32_t DG_GetTicksMs()
 
 int DG_GetKey(int *pressed, unsigned char *doomKey)
 {
-    // if (s_KeyQueueReadIndex == s_KeyQueueWriteIndex)
-    // {
-    // 	//key queue is empty
-
-    // 	return 0;
-    // }
-    // else
-    // {
-    // 	unsigned short keyData = s_KeyQueue[s_KeyQueueReadIndex];
-    // 	s_KeyQueueReadIndex++;
-    // 	s_KeyQueueReadIndex %= KEYQUEUE_SIZE;
-
-    // 	*pressed = keyData >> 8;
-    // 	*doomKey = keyData & 0xFF;
-
-    // 	return 1;
-    // }
+    // 0-7 = scanCode 0x1E 0b11110
+    // 8-15 = ascii
+    // 16-23 = modifier
+    // 24-31 = padding
+    uint32_t key = (uint32_t)syscall(69421);
+    *pressed = (key>>16) & 255;
+    *doomKey = (unsigned char)(key & 255);
+    // printf("key: %X, pressed: %X, doomKey: %X", key,*pressed, *doomKey);
+    if (key) {
+        return 1;
+    }
     return 0;
 }
 
