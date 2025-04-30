@@ -27,7 +27,7 @@ pub fn build(b: *Builder) void {
     const userModule = b.addModule(
         "doomgeneric",
         .{
-            .optimize = .ReleaseFast,
+            .optimize = .ReleaseSmall,
             .target = target,
             .link_libc = true,
             .single_threaded = true,
